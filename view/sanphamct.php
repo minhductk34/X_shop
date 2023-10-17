@@ -25,8 +25,7 @@
 
         <div class="mua">
 
-            <!-- <a href="index.php?act=addtocart"><input type="submit" value="    Mua hàng 
-            Giao hàng miễn phí hoặc nhận tại shop" name="addtocart"></a> -->
+            
             <?php
 
             $linksp = "index.php?act=bill&idsp=" . $id;

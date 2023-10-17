@@ -16,7 +16,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
         switch ($act) {
-                //Thêm danh mục
+            //Thêm danh mục
             case 'adddm':
                 //kiểm tra xem người dùng có nhấn vào nút add không
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
@@ -27,13 +27,13 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "danhmuc/add.php";
                 break;
 
-                //List danh mục
+            //List danh mục
             case 'listdm':
                 $listdanhmuc = loadall_danhmuc();
                 include "danhmuc/list.php";
                 break;
 
-                //Xoá danh mục
+            //Xoá danh mục
             case 'xoadm';
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_danhmuc($_GET['id']);
@@ -43,7 +43,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "danhmuc/list.php";
                 break;
 
-                //Sửa danh mục
+            //Sửa danh mục
             case 'suadm';
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $dm = loadone_danhmuc($_GET['id']);
@@ -51,7 +51,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "danhmuc/update.php";
                 break;
 
-                //Update danh mục
+            //Update danh mục
             case 'updatedm';
                 if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                     $id = $_POST['id'];
@@ -64,7 +64,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "danhmuc/list.php";
                 break;
 
-                /** CONTROLLER CHO SẢN PHẨM */
+            /** CONTROLLER CHO SẢN PHẨM */
 
             case 'addsp':
                 //kiểm tra xem người dùng có nhấn vào nút add không
@@ -84,7 +84,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 $listdanhmuc = loadall_danhmuc();
                 include "sanpham/add.php";
                 break;
-                //List sản phẩm
+            //List sản phẩm
             case 'listsp':
                 if (isset($_POST['listok']) && ($_POST['listok'])) {
                     $kyw = $_POST['kyw'];
@@ -98,7 +98,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "sanpham/list.php";
                 break;
 
-                //Xoá sản phẩm
+            //Xoá sản phẩm
             case 'xoasp';
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_sanpham($_GET['id']);
@@ -107,42 +107,8 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "sanpham/list.php";
                 break;
 
-                // case 'edit_taikhoan':
-                //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                //         $name = $_POST['name'];
-                //         $email = $_POST['email'];
-                //         $address = $_POST['address'];
-                //         $tel = $_POST['tel'];
-                //         $id = $_POST['id'];
-                //         update_taikhoan($id, $email, $name, $address, $tel);
-                        
-                //         //$thongbao="Cập nhật thành công";
-                //         //$_SESSION['user'] = checkuser($user, $pass);
-                //         header('location:index.php?act=edit_taikhoan');
-                //     }
-        
-                //     include "taikhoan/update.php";
-                //     break;
-                    case 'dangky':
-                        if (isset($_POST['dangky']) && ($_POST['dangky'])) {
-                            $name = $_POST['name'];
-                            $email = $_POST['email'];
-                            $user = $_POST['user'];
-                            $pass = $_POST['pass'];
-                            insert_taikhoan($name, $email, $user, $pass);
-                            $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chúc năng";
-                        }
-                        include "taikhoan/dangky.php";
-                        break;
 
-                        case 'suasp';
-                         if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                        $sanpham = loadone_sanpham($_GET['id']);
-                        }
-                         include "sanpham/update.php";
-                        break;
-
-                //Update sản phẩm
+            //Update sản phẩm
             case 'updatesp';
                 if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                     $id = $_POST['id'];
@@ -164,6 +130,40 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
 
                 include "sanpham/list.php";
                 break;
+            // case 'edit_taikhoan':
+            //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            //         $name = $_POST['name'];
+            //         $email = $_POST['email'];
+            //         $address = $_POST['address'];
+            //         $tel = $_POST['tel'];
+            //         $id = $_POST['id'];
+            //         update_taikhoan($id, $email, $name, $address, $tel);
+
+            //         //$thongbao="Cập nhật thành công";
+            //         //$_SESSION['user'] = checkuser($user, $pass);
+            //         header('location:index.php?act=edit_taikhoan');
+            //     }
+
+            //     include "taikhoan/update.php";
+            //     break;
+            case 'dangky':
+                if (isset($_POST['dangky']) && ($_POST['dangky'])) {
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $user = $_POST['user'];
+                    $pass = $_POST['pass'];
+                    insert_taikhoan($name, $email, $user, $pass);
+                    $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chúc năng";
+                }
+                include "taikhoan/dangky.php";
+                break;
+
+            case 'suasp';
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $sanpham = loadone_sanpham($_GET['id']);
+                }
+                include "sanpham/update.php";
+                break;
 
 
             case 'thoat':
@@ -172,13 +172,13 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 // include "view/thoat.php";
                 break;
 
-                //Danh sách tài khoản
+            //Danh sách tài khoản
 
             case 'dskh';
                 $listtaikhoan = loadall_taikhoan();
                 include "taikhoan/list.php";
                 break;
-                case 'suatk';
+            case 'suatk';
                 $listtaikhoan = loadall_taikhoan();
                 include "taikhoan/list.php";
                 break;
@@ -187,7 +187,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 $listbinhluan = loadall_binhluan(0);
                 include "binhluan/list.php";
                 break;
-                //Xoá bình luận
+            //Xoá bình luận
 
             case 'xoabl';
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
@@ -198,7 +198,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "binhluan/list.php";
                 break;
 
-                //Xoá tài khoản
+            //Xoá tài khoản
             case 'xoatk';
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_taikhoan($_GET['id']);
@@ -219,13 +219,13 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "home.php";
                 break;
 
-                case 'xoabill':
-                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                        delete_bill($_GET['id']);
-                    }
-                    $sql = "select * from bill order by id desc";
-                    $listbill = pdo_query($sql);
-                    include "bill/listbill.php";
+            case 'xoabill':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_bill($_GET['id']);
+                }
+                $sql = "select * from bill order by id desc";
+                $listbill = pdo_query($sql);
+                include "bill/listbill.php";
                 include "home.php";
 
                 break;
