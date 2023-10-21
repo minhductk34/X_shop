@@ -166,13 +166,11 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 }
                 include "taikhoan/dangky.php";
                 break;
-
-
-
+                
             case 'thoat':
                 unset($_SESSION['role']);
-                header('location:login.php');
-                // include "view/thoat.php";
+                header('location:../index.php');
+                
                 break;
 
             //Danh sách tài khoản
@@ -241,15 +239,6 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 $listtk = loadall_thongke();
                 include "thongke/bieudo.php";
                 break;
-
-
-
-
-
-
-
-
-
             default:
                 include "home.php";
                 break;

@@ -142,11 +142,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'thoat':
 
-            // unset($_SESSION['user']);
-
             session_unset();
             header('location:index.php');
-            // include "view/thoat.php";
             break;
 
         case 'addtocart':

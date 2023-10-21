@@ -14,7 +14,6 @@
                         extract($danhmuc);
                         echo "<option value='" . $id . "'>$name</option>";
                     } ?>
-
                 </select>
                 <input type="submit" name="listok" value="OK">
             </form>

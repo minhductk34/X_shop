@@ -1,6 +1,6 @@
 <?php
     function insert_sanpham($tensp, $giasp,$soluong, $hinh, $mota, $iddm){
-        $sql = "insert into sanpham(name, price, soluong,img, mota, iddm) 
+        $sql = "insert into sanpham(name, price, soloung,img, mota, iddm) 
         values ('$tensp','$giasp','$soluong','$hinh','$mota','$iddm')";
         pdo_execute($sql);
     }

@@ -256,17 +256,13 @@
   <section class="product-new">
 
     <?php
-    $i = 0;
+
     foreach ($spnew as $sp) {
       extract($sp);
       $linksp = "index.php?act=sanphamct&idsp=" . $id;
       $img = $img_path . $img;
-      if (($i == 2) || ($i == 5) || ($i == 8)) {
-        $mr = "";
-      } else {
-        $mr = "mr";
-      }
-      echo '  <div class="product-list" ' . $mr . '>
+
+      echo '  <div class="product-list">
                 <!-- hiển thị top 10 sản phẩm yêu thích nhất -->
                 <div class="anh">
                 <a href="' . $linksp . '"><img src="' . $img . '"  class="image"></a>
@@ -285,7 +281,7 @@
                </div>
             </div>
 ';
-      $i += 1;
+     
     }
     ?>
 

@@ -66,7 +66,7 @@ $dsbl = loadall_binhluan($idpro);
             $iduser =  $_SESSION['id'];
             $ngaybinhluan = date('G:i:s A d/m/Y');
 
-            // $ngaybinhluan=date('l jS \of F Y h:i:s A');
+          
             insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan);
             header("location: " . $_SERVER['HTTP_REFERER']);
         }
