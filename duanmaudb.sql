@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2023 at 06:57 PM
+-- Generation Time: Oct 21, 2023 at 10:07 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -48,7 +48,9 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`id`, `bill_name`, `bill_email`, `bill_address`, `bill_tel`, `bill_pttt`, `total`, `ngaydathang`, `bill_status`, `receive_name`, `receive_tel`, `receive_address`, `tongdonhang`) VALUES
-(81, 'Minh Duc', 'minhductk34@gmail.com', 'Hải Dương', '0964255760', 1, 0, '11:48:00pm 11/10/2023', 0, '', '', '', 50);
+(81, 'Minh Duc', 'minhductk34@gmail.com', 'Hải Dương', '0964255760', 1, 0, '11:48:00pm 11/10/2023', 0, '', '', '', 50),
+(82, 'Minh Duc', 'minhductk34@gmail.com', 'Not', '0964255760', 1, 0, '08:37:24pm 13/10/2023', 0, '', '', '', 50),
+(83, 'Minh Duc', 'minhductk34@gmail.com', 'Not', '0964255760', 1, 0, '08:52:39pm 13/10/2023', 0, '', '', '', 50);
 
 -- --------------------------------------------------------
 
@@ -69,28 +71,6 @@ CREATE TABLE `binhluan` (
 --
 
 INSERT INTO `binhluan` (`id`, `noidung`, `iduser`, `idpro`, `ngaybinhluan`) VALUES
-(33, 'thuyr', 3, 23, '8:38:56 AM 03/10/2022'),
-(34, 'abc', 3, 23, '17:23:05 PM 03/10/2022'),
-(35, 'ttttttttttt', 0, 23, '17:26:10 PM 04/10/2022'),
-(36, 'ttttttt', 3, 23, '17:26:40 PM 04/10/2022'),
-(39, 'aasasdasdasdasd', 3, 23, '22:37:50 PM 04/10/2022'),
-(42, 'eqweq', 3, 22, '14:35:59 PM 05/10/2022'),
-(43, '12423432', 3, 22, '15:09:02 PM 12/10/2022'),
-(44, 'qwewq', 0, 21, '22:36:01 PM 15/10/2022'),
-(45, 'SÀUHIUDFIUQEFEIFUOABFSIDLBVFISBVDSObSPIBFSDJVDFJBVDAJKFNOiasfisuduifhgsfdifndfjv dfijEOIHFEWUVB QƯDNIADHQWI QƯDEFUIHEF9EIOFWINIvdwvnOEWNFISDVNE', 0, 21, '22:36:51 PM 15/10/2022'),
-(46, 'alo', 0, 20, '22:42:57 PM 15/10/2022'),
-(47, 'eqwe', 19, 27, '22:46:34 PM 15/10/2022'),
-(48, 'thuỷ', 4, 24, '22:47:30 PM 15/10/2022'),
-(50, 'alo', 18, 22, '22:48:45 PM 15/10/2022'),
-(51, 'oke', 18, 22, '22:48:48 PM 15/10/2022'),
-(52, 'rat chi la ok', 18, 22, '22:48:56 PM 15/10/2022'),
-(53, 'good chops', 18, 22, '22:49:04 PM 15/10/2022'),
-(54, 'dsad', 22, 31, '13:45:46 PM 19/10/2022'),
-(55, 'fd', 0, 24, '15:05:00 PM 19/10/2022'),
-(56, 'gfdgdfgdfgd', 0, 24, '15:05:03 PM 19/10/2022'),
-(57, 'ttttt', 0, 23, '15:05:36 PM 19/10/2022'),
-(58, '123', 22, 22, '20:35:42 PM 19/10/2022'),
-(59, '4324', 17, 22, '20:35:56 PM 19/10/2022'),
 (60, 'Hàng đẹp quá mỗi tội không có tiền mua', 0, 23, '23:49:49 PM 11/10/2023'),
 (62, 'Ở đây có bán chịu không nè', 25, 24, '23:55:12 PM 11/10/2023');
 
@@ -196,7 +176,9 @@ INSERT INTO `cart` (`id`, `iduser`, `idpro`, `img`, `name`, `price`, `soluong`, 
 (122, 0, 22, 'upload/sp3.jpg', 'Pin dự phòng Apple Magsafe MJWY3 | Chính hãng Apple Việt Nam', 100, 1, 100, 77),
 (123, 0, 23, 'upload/sp4.jpg', 'iPhone 13 256GB | Chính hãng VN/A', 900, 1, 900, 78),
 (124, 0, 21, 'upload/sp2.jpg', 'Ốp lưng MagSafe iPhone 13 Pro Apple Silicone Case Chính hãng', 50, 1, 50, 79),
-(125, 0, 21, 'upload/sp2.jpg', 'Ốp lưng MagSafe iPhone 13 Pro Apple Silicone Case Chính hãng', 50, 1, 50, 81);
+(125, 0, 21, 'upload/sp2.jpg', 'Ốp lưng MagSafe iPhone 13 Pro Apple Silicone Case Chính hãng', 50, 1, 50, 81),
+(126, 0, 21, 'upload/sp2.jpg', 'Ốp lưng MagSafe iPhone 13 Pro Apple Silicone Case Chính hãng', 50, 1, 50, 82),
+(127, 0, 21, 'upload/sp2.jpg', 'Ốp lưng MagSafe iPhone 13 Pro Apple Silicone Case Chính hãng', 50, 1, 50, 83);
 
 -- --------------------------------------------------------
 
@@ -256,7 +238,8 @@ INSERT INTO `sanpham` (`id`, `name`, `price`, `soluong`, `img`, `mota`, `luotxem
 (28, 'Tai nghe Bluetooth Apple AirPods 2 VN/A', 110.00, 0, 'sp9.jpg', 'Chip H1 mới nhất cho thời gian phản hồi nhanh cùng thời lượng pin lên đến 5 giờ\r\nTích hợp 2 Micro giúp khử tiếng ồn của môi trường cho chất lượng âm thanh rõ ràng khi đàm thoại\r\nKích hoạt trợ lý ảo Siri bằng cách gọi \"Hey Siri\"\r\nNhận hoặc dừng cuộc gọi bằng 1 cú chạm với tính năng điều khiển cảm ứng\r\nHỗ trợ sạc nhanh:15 phút sạc pin cho thời gian sử dụng lên đến 3 giờ', 10, 18),
 (29, 'Tai nghe Bluetooth Apple AirPods 3 | Chính hãng Apple Việt Nam', 170.00, 312, 'sp10.jpg', 'Thời lượng pin 6 giờ nghe nhạc, lên đến 30 giờ khi đi kèm hộp sạc\r\nThiết kế mới ôm tai, điều khiển bằng thao tác chạm - giữ mới lạ\r\nTrải nghiệm sống động với âm thanh vòm Spatial audio\r\nChất lượng âm thanh chuyên được xử lý vởi chip Apple H1\r\nTiêu chuẩn Bluetooth 5.0 cho phạm vi kết nối ổn định 10m\r\nYên tâm khi luyện tập thể thao, đi mưa với chuẩn kháng nước IPX4', 0, 18),
 (30, 'Balo Laptop Acer Backpack 15.6', 15.00, 123, 'sp11.jpg', 'Balo laptop Acer Backpack 15.6 inch nhẹ nhàng, nhỏ gọn và tiện dụng\r\nNhỏ gọn và vô cùng tiện lợi đó là những gì mà balo laptop Acer Backpack mang lại. Nếu bạn đang tìm kiếm một chiếc balo có thể đựng vừa laptop 15.6 inches để đồng hành với mình trên mọi chặng đường thì đây sẽ là một sản phẩm không thể hoàn hảo hơn.\r\n\r\nThiết kế gọn nhẹ, chất liệu vải tổng hợp chắc chắn\r\nBalo laptop Acer Backpack được thiết kế gọn nhẹ và vô cùng đơn giản. Với kích thước các chiều dài 37cm x rộng 15cm x cao 50cm có thể đựng được laptop đến 15.6 inches cùng với trọng lượng chỉ 400 gam giúp bạn thoải mái mang theo trong mọi hành trình.', 15, 14),
-(31, 'Bàn Phím Cơ Gaming Predator Aethon TKL 301', 100.00, 3435555, 'sp12.png', 'Bàn phím cơ Gaming Predator Aethon 301 TKL - Nhanh nhạy cực tiện dụng\r\nBàn phím cơ Gaming Predator Aethon 301 TKL là sản phẩm bàn phím cơ được giới trẻ ưa dùng, đặc biệt là trong giới game thủ. Aethon 301 TKL nhỏ gọn và độ nảy của từng phím tắt rất nhạy, đặc biệt là âm thanh phát ra khi gõ lớn tăng cảm giác chiến thắng khi chơi game.\r\n\r\nThiết kế bàn phím gọn nhẹ, kích thước tối ưu\r\nBàn phím cơ Gaming Predator Aethon 301 TKL có khung bàn phím được làm từ nhựa cao cấp cùng với phong cách thiết kế nhỏ gọn. Chính vì thiết kế nhỏ nên có không gian trống để đặt vị trí của chuột. Game thủ không còn lo lắng về thao tác chạm chuột khi vị trí giữa chuột và bàn phím được đặt gần nhau,.', 15, 19);
+(31, 'Bàn Phím Cơ Gaming Predator Aethon TKL 301', 100.00, 3435555, 'sp12.png', 'Bàn phím cơ Gaming Predator Aethon 301 TKL - Nhanh nhạy cực tiện dụng\r\nBàn phím cơ Gaming Predator Aethon 301 TKL là sản phẩm bàn phím cơ được giới trẻ ưa dùng, đặc biệt là trong giới game thủ. Aethon 301 TKL nhỏ gọn và độ nảy của từng phím tắt rất nhạy, đặc biệt là âm thanh phát ra khi gõ lớn tăng cảm giác chiến thắng khi chơi game.\r\n\r\nThiết kế bàn phím gọn nhẹ, kích thước tối ưu\r\nBàn phím cơ Gaming Predator Aethon 301 TKL có khung bàn phím được làm từ nhựa cao cấp cùng với phong cách thiết kế nhỏ gọn. Chính vì thiết kế nhỏ nên có không gian trống để đặt vị trí của chuột. Game thủ không còn lo lắng về thao tác chạm chuột khi vị trí giữa chuột và bàn phím được đặt gần nhau,.', 15, 19),
+(45, 'Điện thoại xiao chenmeng', 130000.00, 1, 'bee it.jpg', 'fff', 0, 18);
 
 -- --------------------------------------------------------
 
@@ -281,7 +264,8 @@ CREATE TABLE `taikhoan` (
 
 INSERT INTO `taikhoan` (`id`, `name`, `user`, `pass`, `email`, `address`, `tel`, `role`) VALUES
 (24, 'Nguyen Minh Duc', 'minhductk', '12345', 'minhductk34@gmail.com', 'Hai Duong', '0964255760', 1),
-(25, 'Minh Duc Dep Trai', 'minhducdz', '22222', 'minhductk34@gmail.com', NULL, NULL, 0);
+(25, 'Minh Duc Dep Trai', 'minhducdz', '22222', 'minhductk34@gmail.com', NULL, NULL, 0),
+(26, 'Minh Duc', 'izuku', '11111', 'minhductk34@gmail.com', NULL, NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -332,7 +316,7 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `binhluan`
@@ -344,7 +328,7 @@ ALTER TABLE `binhluan`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT for table `danhmuc`
@@ -356,13 +340,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
