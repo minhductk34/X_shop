@@ -47,7 +47,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
                 $sp_cungloai = load_sanpham_cungloai($id, $iddm);
-                $updateluotxem = update_luotxem($id, $luotxem);
+                // $updateluotxem = update_luotxem($id, $luotxem);
                 include "view/sanphamct.php";
             } else {
                 include "view/home.php";
@@ -60,21 +60,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $pass = $_POST['pass'];
                 $kq = checkuser($user, $pass);
                 $role = $kq['role'];
-
-                // $checkuser=checkuser($user, $pass);
-                // $role=$checkuser[0]['role'];
-
-                //  if(is_array($kq)){
-                //      $_SESSION['user']=$kq;
-                //      // $thongbao="Đã đăng nhập thành công";
-                //      header('location:index.php');
-                //     }else{
-                //         //header('location:index.php?act=dangnhap');
-                //      $thongbao="Tài khoản không tổn tại. Vui lòng kiểm tra lại"; 
-
-
-                //     }    
-
 
                 if ($role == 1) {
                     $_SESSION['role'] = $role;

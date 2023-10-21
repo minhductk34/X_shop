@@ -21,16 +21,17 @@ if (is_file($hinhpart)) {
             <select name="iddm">
                 <option value="0" selected>Tất cả</option>
                 <?php
+                echo $listdanhmuc;
                 foreach ($listdanhmuc as $danhmuc) {
-                    //extract($danhmuc);
+                    // extract($danhmuc);
                     if ($iddm == $danhmuc['id']) echo '<option value="' . $danhmuc['id'] . '" selected > ' . $danhmuc['name'] . ' </optinon>';
                     else echo '<option value="' . $danhmuc['id'] . '"  > ' . $danhmuc['name'] . ' </optinon>';
                 } ?>
 
             </select>
         </div>
-        <div class="row mb10">
-            Tên loại <br>
+
+            Tên SP <br>
             <input type="text" name="tensp" value="<?= $name ?>">
         </div>
         <div class="row mb10">

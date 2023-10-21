@@ -12,7 +12,7 @@ if ((isset($_POST['dangnhap'])) && ($_POST['dangnhap'])) {
     header('location: index.php');
   }else {
     $txt_erro = "Tài khoản và mật khẩu không tồn tại!";
-  } //header('location: login.php');
+  } 
 }
 ?>
 

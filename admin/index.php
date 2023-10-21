@@ -104,7 +104,16 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                     delete_sanpham($_GET['id']);
                 }
                 $listsanpham = loadall_sanpham();
+
                 include "sanpham/list.php";
+                break;
+            case 'suasp';
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $sanpham = loadone_sanpham($_GET['id']);
+                }
+                $listdanhmuc = loadall_danhmuc();
+                include "sanpham/update.php";
+
                 break;
 
 
@@ -158,12 +167,6 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 include "taikhoan/dangky.php";
                 break;
 
-            case 'suasp';
-                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    $sanpham = loadone_sanpham($_GET['id']);
-                }
-                include "sanpham/update.php";
-                break;
 
 
             case 'thoat':
