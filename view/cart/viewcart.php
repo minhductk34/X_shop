@@ -8,6 +8,7 @@
       <th>Đơn giá</th>
       <th>Số lượng</th>
       <th>Thành tiền</th>
+      
     </tr>
     <?php
     viewcart(1);

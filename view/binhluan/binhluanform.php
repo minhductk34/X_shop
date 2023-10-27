@@ -33,7 +33,7 @@ $dsbl = loadall_binhluan($idpro);
 
                 <?php
                 foreach ($dsbl as $bl) {
-                    
+
                     # code...
                     extract($bl);
                     echo '  <tr>  <td> ' . $noidung . ' </td>';
@@ -49,22 +49,25 @@ $dsbl = loadall_binhluan($idpro);
         </div>
 
         <div class="guibl">
-            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-                <input type="hidden" name="idpro" value="<?= $idpro ?>">
-                <input type="text" name="noidung" class="noidung" placeholder="Bình luận sản phẩm">
-                <input type="submit" value="Gửi bình luận" name="guibinhluan" class="guibinhluan">
-                
-            </form>
+            <?php if (isset($_SESSION['id'])): ?>
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
+                    <input type="hidden" name="idpro" value="<?= $idpro ?>">
+                    <input type="text" name="noidung" class="noidung" placeholder="Bình luận sản phẩm">
+                    <input type="submit" value="Gửi bình luận" name="guibinhluan" class="guibinhluan">
+                </form>
+            <?php else: ?>
+                <strong>Vui lòng đăng nhập để gửi bình luận.</strong>
+            <?php endif; ?>
         </div>
 
         <?php
         if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
             $noidung = $_POST['noidung'];
             $idpro = $_POST['idpro'];
-            $iduser =  $_SESSION['id'];
+            $iduser = $_SESSION['id'];
             $ngaybinhluan = date('G:i:s A d/m/Y');
 
-          
+
             insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan);
             header("location: " . $_SERVER['HTTP_REFERER']);
         }

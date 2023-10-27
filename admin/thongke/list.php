@@ -21,7 +21,6 @@
 
             <?php
             foreach ($listtk as $tk) {
-                # code...
                 extract($tk);
               
                 echo '

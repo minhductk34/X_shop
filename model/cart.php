@@ -45,7 +45,6 @@ function tongdonhang()
 {
     $tong = 0;
     foreach ($_SESSION['mycart'] as $cart) {
-        # code...
         $thanhtien = $cart[3] * $cart[4];
         $tong += $thanhtien;
     }
@@ -101,6 +100,7 @@ function insert_bill($name, $email, $address, $tel, $pttt, $ngaydathang, $tongdo
 {
     $sql = "insert into bill (bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,tongdonhang) 
     values ('$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+    // var_dump($sql);
     return pdo_execute_lastInsertID($sql);
 }
 function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien, $idbill)
@@ -143,9 +143,10 @@ function loadall_bill($kyw = "", $iduser = 0)
     $listbill = pdo_query($sql);
     return $listbill;
 }
+
 function loadall_thongke()
 {
-    $sql = "select danhmuc.id as madm,danhmuc.name as tendm, count(sanpham.id) as countsp, min(sanpham.price) as minprice, max(sanpham.price) as maxprice, avg(sanpham.price) as avgprice ";
+    $sql = "select danhmuc.id as madm,danhmuc.name as tendm, count(sanpham.id) as countsp, min(sanpham.price) as minprice, max(sanpham.id) as maxprice, avg(sanpham.price) as avgprice ";
     $sql .= " from sanpham left join danhmuc on danhmuc.id=sanpham.iddm";
     $sql .= " group by danhmuc.id order by danhmuc.id desc";
     $listtk = pdo_query($sql);
