@@ -18,7 +18,6 @@
                 <th>GIÁ TRỊ ĐƠN HÀNG</th>
                 <th>NGÀY ĐẶT HÀNG</th>
 
-                <th>TÌNH TRẠNG ĐƠN HÀNG</th>
                 <th>THAO TÁC</th>
 
             </tr>
@@ -33,7 +32,6 @@
                 <br> ' . $bill["bill_email"] . '
                 <br> ' . $bill["bill_address"] . '
                 <br> ' . $bill["bill_tel"];
-                $ttdh = get_ttdh($bill["bill_status"]);
                 $countsp = loadall_cart_count($bill["id"]);
                 echo '
                     <tr>
@@ -43,8 +41,6 @@
                     <td> ' . $countsp . ' </td>
                     <td> ' . $bill['tongdonhang'] . ' </td>
                     <td> ' . $bill['ngaydathang'] . ' </td>
-                    
-                    <td> ' . $ttdh . ' </td>
                     <td> <a href=""><input type="button" value="Sửa" class="sua"></a>
                             <a href="' . $xoabill . '"><input type="button" value="Xóa" class="xoa"> </a></td> 
                     </tr>

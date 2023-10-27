@@ -139,22 +139,21 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
 
                 include "sanpham/list.php";
                 break;
-            // case 'edit_taikhoan':
-            //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-            //         $name = $_POST['name'];
-            //         $email = $_POST['email'];
-            //         $address = $_POST['address'];
-            //         $tel = $_POST['tel'];
-            //         $id = $_POST['id'];
-            //         update_taikhoan($id, $email, $name, $address, $tel);
+            case 'edit_taikhoan':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $address = $_POST['address'];
+                    $tel = $_POST['tel'];
+                    $id = $_POST['id'];
+                    update_taikhoan($id, $email, $name, $address, $tel);
 
-            //         //$thongbao="Cập nhật thành công";
-            //         //$_SESSION['user'] = checkuser($user, $pass);
-            //         header('location:index.php?act=edit_taikhoan');
-            //     }
+                   
+                    header('location:index.php?act=edit_taikhoan');
+                }
 
-            //     include "taikhoan/update.php";
-            //     break;
+                include "taikhoan/update.php";
+                break;
             case 'dangky':
                 if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                     $name = $_POST['name'];
@@ -166,11 +165,11 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                 }
                 include "taikhoan/dangky.php";
                 break;
-                
+
             case 'thoat':
                 unset($_SESSION['role']);
                 header('location:../index.php');
-                
+
                 break;
 
             //Danh sách tài khoản
@@ -186,6 +185,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
 
             case 'dsbl';
                 $listbinhluan = loadall_binhluan(0);
+                // var_dump($listbinhluan);
                 include "binhluan/list.php";
                 break;
             //Xoá bình luận

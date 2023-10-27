@@ -11,13 +11,13 @@
                     <th>ID</th>
                     <th>HỌ TÊN</th>
                     <th>NỘI DUNG BÌNH LUẬN</th>
-                    <!-- <th>TÊN ĐĂNG NHÂP</th> -->
                     <th>TÊN ĐĂNG NHẬP</th>
                     <th>ID SẢN PHẨM</th>
                     <th>NGÀY BÌNH LUẬN</th>
                     <th></th>
                 </tr>
                 <?php
+                // echo "lol";
                 foreach ($listbinhluan as $binhluan) {
                     extract($binhluan);
                     $suabl = "index.php?act=suabl&id=" . $id;
@@ -44,7 +44,7 @@
             <input type="button" value="Chọn tất cả">
             <input type="button" value="Bỏ chọn tất cả">
             <input type="button" value="Xóa các mục đã chọn">
-            <!-- <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a> -->
+           
         </div>
     </div>
 </div>

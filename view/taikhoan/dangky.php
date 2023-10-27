@@ -2,17 +2,17 @@
     <form action="index.php?act=dangky" method="post">
         <h1>Đăng ký</h1>
         <div>
-            <input type="text" name="name" placeholder="   Họ tên">
+            <input type="text" name="name" placeholder="Họ tên">
         </div>
         <div>
-            <input type="email" name="email" placeholder="   Email" >
+            <input type="email" name="email" placeholder="Email" >
         </div>
 
         <div>
-            <input type="text" name="user" placeholder="   Tên đăng nhập">
+            <input type="text" name="user" placeholder="Tên đăng nhập">
         </div>
         <div>
-            <input type="password" name="pass" placeholder="   Mật khẩu">
+            <input type="password" name="pass" placeholder="Mật khẩu">
         </div>
         <div class="khac">
           <div class="submit">

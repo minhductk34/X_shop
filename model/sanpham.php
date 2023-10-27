@@ -56,7 +56,6 @@
             $sql = " update sanpham set iddm='".$iddm."', name='".$tensp."', price='".$giasp."'
             ,soluong='".$soluong."' , mota='".$mota."', img='".$hinh."' where id=".$id;
         }else
-        //$sql="update sanpham set name=?, price=?, mota=? where id=?";
 
            $sql = " update sanpham set  iddm='".$iddm."', name='".$tensp."', price='".$giasp."',soluong='".$soluong."' 
            , mota='".$mota."' where id=".$id;
@@ -66,8 +65,6 @@
     function update_luotxem($id,$luotxem){
 
         $sql = " update sanpham set luotxem='".($luotxem +1) ."'  where id=".$id;
-        //$sql="update sanpham set name=?, price=?, mota=? where id=?";
-
            pdo_execute($sql);
         
     }

@@ -124,9 +124,9 @@
 <!-- Thư viện jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- tải nội dung từ tệp tin "binhluanform.php" và chèn nó vào phần tử có id "binhluan"  -->
 <script>
     $(document).ready(function() {
-
         $("#binhluan").load("view/binhluan/binhluanform.php", {
             idpro: <?= $id ?>
         });

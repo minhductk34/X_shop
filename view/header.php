@@ -52,7 +52,7 @@
 
 
             <div class="giohang">
-                <a href="index.php?act=addtocart"><img src="view/image/shopping-cart.png" alt=""></a>
+                <a href="index.php?act=viewcart"><img src="view/image/shopping-cart.png" alt=""></a>
             </div>
 
 

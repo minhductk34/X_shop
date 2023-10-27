@@ -40,8 +40,6 @@ $dsbl = loadall_binhluan($idpro);
                     echo ' <td> ' . $name . ' </td>';
                     echo ' <td> ' . $ngaybinhluan . ' </td> </tr>';
                 }
-
-
                 ?>
 
             </table>

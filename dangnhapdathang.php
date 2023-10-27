@@ -1,22 +1,12 @@
 <div class="dangnhap">
-  <?php
-  if (isset($_SESSION['user'])) {
-    //extract($_SESSION['user']);
-  ?>
-    <a href="index.php?act=viewcart">Đơn hàng của tôi</a> <br>
-    <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a> <br>
-    <a href="admin/index.php">Đăng nhập Admin</a> <br>
-    <a href="index.php?act=doimk">Đổi mật khẩu</a> <br>
-    <a href="index.php?act=quenmk">Lấy lại mật khẩu</a> <br>
-    <a href="index.php?act=thoat">Đăng xuất</a>
-  <?php } else { ?>
+ 
     <form action="index.php?act=dangnhap" method="post">
-      <h1>Đăng nhập</h1>
+      <h1>Đăng nhập để đặt hàng</h1>
       <div>
         <input type="text" placeholder="   Tên đăng nhập" name="user">
       </div>
       <div>
-        <input type="password" name="pass" placeholder="   Mật khẩu">
+        <input type="password" name="pass" placeholder="Mật khẩu">
       </div>
       <div class="submit">
         <input type="submit" value="Đăng nhập" name="dangnhap">
@@ -24,8 +14,8 @@
 
       
       <div>
-        <p>Bạn quên mật khẩu? <a href="index.php?act=quenmk">Lấy lại mật khẩu</a></p>
-        <p>Bạn chưa có tài khoản? <a href="index.php?act=dangky">Đăng kí tài khoản</a></p>
+        <p>Bạn quên mật khẩu?<a href="index.php?act=quenmk">Lấy lại mật khẩu</a> <br>
+        <p>Bạn chưa có tài khoản? <a href="view/taikhoan/dangky.php">Đăng kí tài khoản</a></p>
       </div>
       <h5>Hoặc</h5>
       <div class="khac">
@@ -34,7 +24,7 @@
       </div>
     </form>
     
-  <?php } ?>
+
 
   <p class="thongbao">
         <?php
